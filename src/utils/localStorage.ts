@@ -1,4 +1,4 @@
-import { DataTable, LocalStorageData, User } from '../types';
+import { DataTable, LocalStorageData, User, TableTemplateType } from '../types';
 import { mockTables, mockUsers } from '../data/mockData';
 
 const STORAGE_KEY = 'safetyculture_data_tables';
@@ -189,7 +189,7 @@ export const importTableData = (jsonData: string): DataTable => {
     return createTable({
       name: tableData.name,
       description: tableData.description || '',
-      template: tableData.template || 'custom',
+      template: (tableData.template || 'custom') as TableTemplateType,
       columns: tableData.columns,
       rows: tableData.rows
     });

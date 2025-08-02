@@ -1,4 +1,4 @@
-import { DataTable, TableColumn, TableRow, User, TableTemplate } from '../types';
+import { DataTable, TableColumn, TableRow, User, TableTemplate, TableTemplateType } from '../types';
 
 export const mockUsers: User[] = [
   { id: 'user-1', name: 'John Smith', email: 'john.smith@company.com', role: 'Safety Manager' },
@@ -128,7 +128,7 @@ export const mockTables: DataTable[] = [
     id: 'risk-register',
     name: 'Risk Register',
     description: 'Company-wide risk assessment and management',
-    template: 'risk',
+    template: 'risk' as TableTemplateType,
     columns: riskRegisterColumns,
     rows: riskRegisterRows,
     createdAt: '2024-01-01T00:00:00Z',
@@ -139,7 +139,7 @@ export const mockTables: DataTable[] = [
     id: 'chemical-register',
     name: 'Chemical Register',
     description: 'Hazardous chemicals inventory and safety data',
-    template: 'chemical',
+    template: 'chemical' as TableTemplateType,
     columns: chemicalRegisterColumns,
     rows: chemicalRegisterRows,
     createdAt: '2024-01-10T00:00:00Z',
@@ -150,7 +150,7 @@ export const mockTables: DataTable[] = [
     id: 'hazard-register',
     name: 'Hazard Register',
     description: 'Workplace hazard identification and control measures',
-    template: 'hazard',
+    template: 'hazard' as TableTemplateType,
     columns: hazardRegisterColumns,
     rows: hazardRegisterRows,
     createdAt: '2024-01-15T00:00:00Z',
@@ -161,7 +161,7 @@ export const mockTables: DataTable[] = [
     id: 'asset-register',
     name: 'Asset Register',
     description: 'Equipment and asset management tracking',
-    template: 'asset',
+    template: 'asset' as TableTemplateType,
     columns: assetRegisterColumns,
     rows: assetRegisterRows,
     createdAt: '2024-01-20T00:00:00Z',
@@ -172,7 +172,7 @@ export const mockTables: DataTable[] = [
     id: 'incident-register',
     name: 'Incident Register',
     description: 'Safety incidents and near-miss reporting',
-    template: 'custom',
+    template: 'custom' as TableTemplateType,
     columns: incidentRegisterColumns,
     rows: incidentRegisterRows,
     createdAt: '2024-02-01T00:00:00Z',

@@ -1,6 +1,6 @@
 export type ColumnType = 'text' | 'number' | 'date' | 'dropdown' | 'yes_no' | 'user' | 'file_upload';
 
-export type TableTemplate = 'risk' | 'chemical' | 'hazard' | 'asset' | 'custom';
+export type TableTemplateType = 'risk' | 'chemical' | 'hazard' | 'asset' | 'custom';
 
 export interface TableColumn {
   id: string;
@@ -29,7 +29,7 @@ export interface DataTable {
   id: string;
   name: string;
   description?: string;
-  template: TableTemplate;
+  template: TableTemplateType;
   columns: TableColumn[];
   rows: TableRow[];
   createdAt: string;
@@ -64,7 +64,7 @@ export interface TableStats {
 }
 
 export interface TableTemplate {
-  id: TableTemplate;
+  id: TableTemplateType;
   name: string;
   description: string;
   icon: string;
